@@ -1,11 +1,12 @@
 import React from 'react';
 import { Layout, theme } from 'antd';
-import { Table, Breadcrumb } from 'antd';
+import { Table } from 'antd';
 import type { ColumnsType, TableProps } from 'antd/es/table';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/SideBar';
 import Footer from './components/layout/Footer';
 import './index.css';
+import Breadcrum from './components/Breadcrumb';
 
 const { Content } = Layout;
 interface DataType {
@@ -91,10 +92,7 @@ const App: React.FC = () => {
             <Layout>
                 <Header />
                 <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
+                    <Breadcrum />
                     <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
                         <Table columns={columns} dataSource={data} onChange={onChange} />
                     </div>
