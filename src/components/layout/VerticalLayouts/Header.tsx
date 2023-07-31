@@ -7,7 +7,6 @@ const Header: React.FC = () => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
-    console.log(collapsed);
 
     return (
         <Layout.Header style={{ padding: 0, background: colorBgContainer }}>
